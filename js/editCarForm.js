@@ -2,7 +2,7 @@ import {loadContent} from "./loadContent.js";
 
 export function load(id) {
     function loadInputForm() {
-        const getApiUrl = `http://localhost:8080/api/cars/id/${id}/includeAll`;
+        const getApiUrl = `https://carsskoleprojekt.azurewebsites.net/api/cars/id/${id}/includeAll`;
 
         const fetchCarData = async () => {
             try {
@@ -55,7 +55,7 @@ export function load(id) {
         // Function to submit the edited data
         const saveEdit = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/cars/id/${id}`, {
+                const response = await fetch(`https://carsskoleprojekt.azurewebsites.net/api/cars/id/${id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",

@@ -18,7 +18,7 @@ export function load() {
         };
 
 
-        fetch('http://localhost:8080/api/cars', {
+        fetch('https://carsskoleprojekt.azurewebsites.net/api/cars', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

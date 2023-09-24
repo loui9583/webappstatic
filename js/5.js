@@ -9,7 +9,7 @@ export async function load() {
 
     async function deleteMember(username) {
         try {
-            const response = await fetch(`http://localhost:8080/api/members/${username}`, {
+            const response = await fetch(`https://carsskoleprojekt.azurewebsites.net/api/members/${username}`, {
                 method: "DELETE"
             });
 
@@ -26,7 +26,7 @@ export async function load() {
 
     async function fetchCarById(carId) {
         try {
-            const response = await fetch(`http://localhost:8080/api/cars/id/${carId}/includeAll`);
+            const response = await fetch(`https://carsskoleprojekt.azurewebsites.net/api/cars/id/${carId}/includeAll`);
 
             if (!response.ok) {
                 throw new Error("FAIL: " + response.status);
@@ -49,7 +49,7 @@ export async function load() {
 
     async function fetchMemberById(username) {
         try {
-            const response = await fetch(`http://localhost:8080/api/members/${username}`);
+            const response = await fetch(`https://carsskoleprojekt.azurewebsites.net/api/members/${username}`);
 
             if (!response.ok) {
                 throw new Error("FAIL: " + response.status);
@@ -74,7 +74,7 @@ export async function load() {
 
     async function fetchAllCars() {
         try {
-            const response = await fetch('http://localhost:8080/api/cars/includeAll');
+            const response = await fetch('https://carsskoleprojekt.azurewebsites.net/api/cars/includeAll');
 
             if (!response.ok) {
                 throw new Error("FAIL: " + response.status);
@@ -123,7 +123,7 @@ export async function load() {
 
     async function fetchAllUsers() {
         try {
-            const response = await fetch('http://localhost:8080/api/members/includeAll');
+            const response = await fetch('https://carsskoleprojekt.azurewebsites.net/api/members/includeAll');
 
             if (!response.ok) {
                 throw new Error("FAIL: " + response.status);
@@ -173,7 +173,7 @@ export async function load() {
 
     async function deleteCar(carId) {
         try {
-            const response = await fetch(`http://localhost:8080/api/cars/${carId}`, { method: "DELETE" });
+            const response = await fetch(`https://carsskoleprojekt.azurewebsites.net/api/cars/${carId}`, { method: "DELETE" });
 
             if (response.ok) {
                 console.log("Great Success");

@@ -2,7 +2,7 @@ import { loadContent } from "./loadContent.js";
 
 export function load(username) {
     function loadInputForm() {
-        const getApiUrl = `http://localhost:8080/api/members/${username}`;
+        const getApiUrl = `https://carsskoleprojekt.azurewebsites.net/api/members/${username}`;
 
         const fetchUserData = async () => {
             try {
@@ -50,7 +50,7 @@ export function load(username) {
 
         const saveEdit = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/members/${username}`, {
+                const response = await fetch(`https://carsskoleprojekt.azurewebsites.net/api/members/${username}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
