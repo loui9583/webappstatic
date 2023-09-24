@@ -243,4 +243,10 @@ export async function load() {
     document.getElementById("addNewMember").addEventListener("click", () => {
         loadEditForms("addMember");
     });
+
+
+    document.getElementById("1").style.background = "none"
+    document.getElementById("2").style.background = "none"
+    document.getElementById("5").style.background = "#2c1e1e"
+
 }
