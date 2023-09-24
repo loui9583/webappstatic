@@ -1,0 +1,53 @@
+<div style="background: rgba(26,29,32,0.71); padding: 10px; color: white; margin: 35px; border-radius: 2px">
+    <h1>Dynamic UI manipulation using data obtained via fetch
+    </h1>
+    <h1 style="border: 1px solid white;"></h1>
+    <br>
+        <h3 style="word-wrap: break-word">Enter this URL in a browser and observe the result: https://jsonplaceholder.typicode.com/users/2
+        <br>
+        What is it, you get back?
+    </h3>
+    <br>
+    <ul>
+        <li style="font-size: 20px">A JSON array of user objects with the fields 'id, name, email, address{{geo}}
+            phone, website, company{}'
+            <br>where company and address is nested objects inside the user, and inside the address object there is
+            a
+            nested
+            object 'geo'
+        </li>
+    </ul>
+    <br>
+    <h1 style="border: 1px solid white;"></h1>
+    <br>
+    <h3>Change the number at the end of the URL to any number <= 10 and observe the result.</h3>
+    <br>
+    <ul>
+        <li style="font-size: 20px">I get one object instead of an array of objects, and the object returned is the
+            one that matches the id of
+            the
+            url
+        </li>
+    </ul>
+    <br>
+    <h1 style="border: 1px solid white;"></h1>
+    <br>
+    <h3>Get user by ID, or get all users.</h3>
+
+        <input style="font-size: 20px; margin-right: 5px" id="userId" placeholder="Enter user id.."><button style="margin-right: 5px; font-size: 20px" id="getUserById">Get User</button><button style="font-size: 20px" id="getAllUsers">Get All Users</button>
+        <table class="table table-dark">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Website</th>
+            </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+   
+</div>
